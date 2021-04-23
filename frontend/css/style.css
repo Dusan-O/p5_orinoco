@@ -1,0 +1,103 @@
+html, body {
+  min-height: 100vh;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Open Sans", sans-serif;
+  color: #444;
+}
+
+main.container {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+#navbarMain, #footerMain {
+  background-color: #444;
+}
+
+#footerMain {
+  margin-top: 3em;
+  padding: .5em;
+  font-size: .85em;
+  text-align: center;
+  color: #aaa;
+}
+
+.product {
+  -webkit-box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product .image {
+  min-height: 25em;
+  background-position: center center;
+  background-size: cover;
+}
+
+.product-card {
+  -webkit-box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.product-card:hover {
+  -webkit-box-shadow: 8px 14px 14px rgba(0, 0, 0, 0.1);
+          box-shadow: 8px 14px 14px rgba(0, 0, 0, 0.1);
+}
+
+.product-card:hover .image .content {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.product-card .image {
+  overflow: hidden;
+  height: 20em;
+}
+
+.product-card .image .content {
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-size: cover;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.bubble-nb-articles {
+  position: relative;
+  left: -.5em;
+  top: .2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 24px;
+  height: 24px;
+  margin-top: -1em;
+  font-size: .8em;
+  font-weight: bold;
+  background-color: red;
+  color: #fff;
+  border-radius: 50%;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+/*# sourceMappingURL=style.css.map */

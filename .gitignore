@@ -1,0 +1,5 @@
+/.vscode/
+/.idea/
+/backend/.DS_store
+/frontend/.DS_store
+.DS_store

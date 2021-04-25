@@ -62,5 +62,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 console.error(error);
             });
         });
+    } else {
+        alertNoProducts.show();
     }
 });

@@ -1,3 +1,4 @@
+// Const template to the HTML
 const template = `
 <div class="card">
             <div class="card-header">
@@ -119,9 +120,9 @@ const template = `
             </div>
         </div>
 `;
-
+// Export class ComFormContact
 export class ComFormContact extends HTMLDivElement {
-
+    // Regex patterns
     constructor() {
         super();
         this.innerHTML = template;

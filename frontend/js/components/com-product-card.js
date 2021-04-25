@@ -1,7 +1,8 @@
+// Import formatPrice from index.js
 import {formatPrice} from '../functions/index.js';
-
+// Export class ComProductCard
 export class ComProductCard extends HTMLDivElement {
-    
+    // Constructor(product)
     constructor(product) {
         super();
         const template = document.getElementById('productCardTemplate').innerHTML;

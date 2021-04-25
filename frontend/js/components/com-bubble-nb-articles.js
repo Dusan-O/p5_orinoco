@@ -1,3 +1,4 @@
+// Export class ComBubbleNbArrticles
 export class ComBubbleNbArticles extends HTMLSpanElement {
 
     constructor() {
@@ -7,7 +8,7 @@ export class ComBubbleNbArticles extends HTMLSpanElement {
             .querySelector('#navbarMain .nav-link[href="basket.html"]')
             .appendChild(this);
     }
-
+    // Function update the number
     update(number) {
         if (number === 0) {
             this.classList.add('d-none');

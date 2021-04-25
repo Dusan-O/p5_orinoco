@@ -1,11 +1,12 @@
+// Import formatPrice & message from index.js
 import {formatPrice, message} from "../functions/index.js";
-
+// Const template to the HTML
 const template = `
     <ul class="list-group"></ul>
     <p class="text-end mb-1 mt-4">Vous avez sélectionné : <strong class="nbArticles"></strong></p>
     <p class="text-end">Pour un montant total de : <strong class="price"></strong></p>
 `;
-
+// Const itemTemplate to the HTML
 const itemTemplate = `
   <div class="row align-items-center">
       <div class="col-2">
@@ -20,7 +21,7 @@ const itemTemplate = `
       </div>
   </div>
 `;
-
+// Export class CombasketList
 export class ComBasketList extends HTMLDivElement {
 
     constructor(basket) {
@@ -32,12 +33,12 @@ export class ComBasketList extends HTMLDivElement {
         this.price = this.querySelector('.price');
         this.update();
     }
-
+    // Function update()
     update() {
         const list = this.querySelector('.list-group');
         list.innerHTML = '';
         let index = 0;
-
+        // ReplaceAll forEachProduct
         this.basket.articles.forEach(product => {
             const item = document.createElement('li');
             item.classList.add('list-group-item');
@@ -46,7 +47,7 @@ export class ComBasketList extends HTMLDivElement {
                 .replaceAll('#name#', product.name)
                 .replaceAll('#image#', product.imageUrl)
                 .replaceAll('#price#', formatPrice(product.price));
-
+            // 'btn' on 'click' -> message warning
             item
                 .querySelector('.btn')
                 .addEventListener('click', () => {

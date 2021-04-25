@@ -1,9 +1,11 @@
+// Import files
 import { Basket } from './classes/basket.class.js';
 import { ComBubbleNbArticles } from './components/com-bubble-nb-articles.js';
 import { ComAlertNoProducts } from './components/com-alert-no-products.js';
 import { ComFormContact } from './components/com-form-contact.js';
 import { ComBasketList } from './components/com-basket-list.js';
 
+// DomContentLoaded
 window.addEventListener('DOMContentLoaded', () => {
 
     const basket = new Basket();
@@ -13,10 +15,10 @@ window.addEventListener('DOMContentLoaded', () => {
     bubbleNbArticles.update(basket.articles.length);
 
     const app = document.getElementById('app');
-
+    // Update the bubbleNbArticles
     const alertNoProducts = new ComAlertNoProducts();
     app.appendChild(alertNoProducts);
-
+    // If something in the basket
     if (basket.articles.length) {
 
         const basketList = new ComBasketList(basket);
@@ -33,6 +35,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
         const formContact = new ComFormContact();
         app.appendChild(formContact);
+        // AddEventListener -> Validate then Fetch
         formContact.addEventListener('validate', e => {
             const orderId = Math.floor(Math.random() * 1000000000000);
             fetch(
@@ -57,11 +60,13 @@ window.addEventListener('DOMContentLoaded', () => {
                   window.location = 'confirmation.html';
                 }, 500);
             })
+            // .catch error with alert
             .catch(function (error) {
                 alert('Erreur de communication avec le serveur.');
                 console.error(error);
             });
         });
+        // If basket is empty function show()
     } else {
         alertNoProducts.show();
     }
